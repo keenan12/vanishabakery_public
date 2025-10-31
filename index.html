@@ -1,308 +1,300 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanisha Bakery</title>
     <link rel="stylesheet" href="style.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
   </head>
   <body>
-    <div id="toastNotification" class="toast-notification"></div>
-
-    <div id="cart-sidebar" class="cart-sidebar">
-      <h3>Keranjang Anda</h3>
-      <div id="cart-items">
-        <p>Keranjang kosong.</p>
-      </div>
-      <p class="cart-total">Total: <span id="cart-total-price">Rp 0</span></p>
-      <button class="checkout-btn">Checkout</button>
-      <button class="close-cart-btn" onclick="toggleCart(false)">Tutup</button>
-    </div>
-
     <header>
       <nav class="navbar">
         <div class="logo">
-          <span class="vanisha-text">Vanisha</span
-          ><span class="bakery-text">Bakery</span>
+          <span class="vanisha-text">Vanisha</span>
+          <span class="bakery-text">Bakery</span>
         </div>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
+        <ul class="nav-links">
+          <li><a href="#about">About Us</a></li>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#comments">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
-          <button class="btn-login">Sign In</button>
-          <div class="cart-icon" onclick="toggleCart(true)">
-            🛒 <span id="cart-count" class="cart-count">0</span>
+          <a href="#" class="btn-login">Sign In</a>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
           </div>
-          <div class="menu-toggle" id="menuToggle">☰</div> 
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-content">
-        <h1>Roti Vanisha Bakery</h1>
-        <p>Dibuat dengan bahan pilihan setiap hari.</p>
-        <a href="#menu" class="btn-order">Pesan Sekarang</a>
+        <h1>Vanisha Bakery</h1>
+        <p>
+          Rasakan kelezatan surga dari roti dan kue artisan kami, dibuat dengan
+          cinta.
+        </p>
+        <a href="#menu" class="btn-order">Beli Sekarang</a>
       </div>
     </section>
 
-    <section id="about" class="about">
-      <h2>Tentang Kami</h2>
-      <p class="animated-paragraph">
-        Vanisha Bakery didirikan dengan semangat untuk menyajikan roti dan
-        kue berkualitas tinggi yang dibuat segar setiap hari. Kami hanya
-        menggunakan bahan-bahan terbaik, dipilih secara cermat, untuk memastikan
-        setiap gigitan membawa kebahagiaan. Komitmen kami adalah memberikan cita
-        rasa otentik dan layanan terbaik bagi pelanggan setia kami. Kami percaya
-        bahwa roti yang enak adalah awal dari hari yang menyenangkan!
-      </p>
-      <p class="animated-paragraph">
-        Misi Kami: Menyediakan produk roti dan kue yang lezat, sehat, dan
-        terjangkau, sambil mempertahankan standar kualitas dan kebersihan
-        tertinggi dalam setiap proses pembuatan.
-      </p>
+    <section id="about">
+      <h2>Our Story</h2>
+      <div class="about-content">
+        <p class="animated-line">
+          Vanisha Bakery was born from a passion for baking and a dream to share
+          homemade joy with the world. We believe that the best memories are
+          made around food, and we strive to bake happiness into every single
+          loaf and pastry.
+        </p>
+        <p class="animated-line">
+          Using only the finest, hand-picked ingredients, our bakers wake up
+          before the sun to ensure that every item you purchase is fresh, warm,
+          and bursting with flavor. Our recipes are a blend of time-honored
+          traditions and innovative new creations, perfect for any occasion.
+        </p>
+        <p class="animated-line">
+          Whether you're looking for a simple croissant to start your day, a
+          custom cake for a special celebration, or a comforting loaf of bread,
+          Vanisha Bakery is here to serve you. Come and be a part of our family,
+          where every bite tells a story of passion and dedication.
+        </p>
+      </div>
     </section>
 
-    <section id="menu" class="menu">
-      <h2>Menu Kami</h2>
+    <section id="menu">
+      <h2>Our Popular Menu</h2>
       <div class="menu-grid">
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food1" alt="Roti Cokelat" />
-          <h3>Roti Cokelat Premium</h3>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="price" data-price="16000">Rp 16.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Roti Cokelat Premium"
-            data-price="16000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar4.jpg" alt="Croissant" />
+          <h3>Butter Croissant</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">Rp12.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food2" alt="Roti Keju" />
-          <h3>Roti Keju Klasik</h3>
-          <div class="rating">⭐⭐⭐⭐</div>
-          <p class="price" data-price="8000">Rp 8.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Roti Keju Klasik"
-            data-price="8000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar2.jpg" alt="Chocolate Cake" />
+          <h3>Chocolate Lava Cake</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">Rp45.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food3" alt="Croissant" />
-          <h3>Croissant Mentega</h3>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="price" data-price="12000">Rp 12.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Croissant Mentega"
-            data-price="12000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar3.jpg" alt="Sourdough" />
+          <h3>Artisan Sourdough Loaf</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">Rp35.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food4" alt="Donut" />
-          <h3>Donut Gula Halus</h3>
-          <div class="rating">⭐⭐⭐⭐</div>
-          <p class="price" data-price="10000">Rp 10.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Donut Gula Halus"
-            data-price="10000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar1.jpg" alt="Donuts" />
+          <h3>Glazed Donuts (Pack)</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">Rp25.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food4" alt="Donut" />
-          <h3>Donut Gula Halus</h3>
-          <div class="rating">⭐⭐⭐⭐</div>
-          <p class="price" data-price="10000">Rp 10.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Donut Gula Halus"
-            data-price="10000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar1.jpg" alt="Brownies" />
+          <h3>Fudgy Brownies</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">Rp28.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food4" alt="Donut" />
-          <h3>Donut Gula Halus</h3>
-          <div class="rating">⭐⭐⭐⭐</div>
-          <p class="price" data-price="10000">Rp 10.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Donut Gula Halus"
-            data-price="10000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar4.jpg" alt="Cinnamon Roll" />
+          <h3>Classic Cinnamon Roll</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">Rp18.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food4" alt="Donut" />
-          <h3>Donut Gula Halus</h3>
-          <div class="rating">⭐⭐⭐⭐</div>
-          <p class="price" data-price="10000">Rp 10.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Donut Gula Halus"
-            data-price="10000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar4.jpg" alt="Cinnamon Roll" />
+          <h3>Classic Cinnamon Roll</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">Rp18.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="menu-card">
-          <img src="https://picsum.photos/400/300?food4" alt="Donut" />
-          <h3>Donut Gula Halus</h3>
-          <div class="rating">⭐⭐⭐⭐</div>
-          <p class="price" data-price="10000">Rp 10.000</p>
-          <button
-            class="add-to-cart-btn"
-            data-name="Donut Gula Halus"
-            data-price="10000"
-          >
-            Tambah ke Keranjang
-          </button>
+          <img src="img/gambar4.jpg" alt="Cinnamon Roll" />
+          <h3>Classic Cinnamon Roll</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">Rp18.000</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
         </div>
       </div>
     </section>
 
-    <section id="delivery" class="delivery">
-      <h2>Delivery</h2>
+    <section id="comments">
+      <div class="comments-header">
+        <span class="section-subtitle">TESTIMONIALS</span>
+        <h2>What Our Client Say</h2>
+        <div class="separator-line"></div>
+      </div>
+
+      <div class="comments-slider">
+        <div class="comment-card">
+          <div class="avatar-container">
+            <img src="/img/bgroti.jpg" />
+          </div>
+          <h4 class="card-name">Zee</h4>
+          <p class="card-text">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt."
+          </p>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="comment-card">
+          <div class="avatar-container">
+            <img src="/img/zze.jpg" />
+          </div>
+          <h4 class="card-name">Zee</h4>
+          <p class="card-text">
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur."
+          </p>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="comment-card">
+          <div class="avatar-container">
+            <img src="/img/zee.webp" />
+          </div>
+          <h4 class="card-name">Zee</h4>
+          <p class="card-text">
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam
+            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi."
+          </p>
+          <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="comment-card">
+          <div class="avatar-container">
+            <img src="/img/zze.jpg" />
+          </div>
+          <h4 class="card-name">Zee</h4>
+          <p class="card-text">
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam
+            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi."
+          </p>
+          <div class="rating">★★★★★</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery">
+      <h2>We Deliver Happiness to Your Door</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-        impedit pariatur animi laudantium delectus enim excepturi voluptas error
-        iusto nisi maiores vel, dicta accusamus nostrum. Qui iure eveniet
-        obcaecati quis quae porro adipisci earum rerum, aperiam rem numquam sunt
-        magni illo quaerat fugiat autem accusantium excepturi ut quasi,
-        laudantium sapiente aspernatur consequuntur. Eveniet nemo magnam
-        pariatur! Necessitatibus quod dolorum obcaecati quos, quasi earum illum
-        modi sequi autem accusantium repellat quidem nam quas! Ex velit dolorem
-        repellat impedit vero similique aperiam aliquid distinctio sit
-        architecto iure sint delectus quibusdam, saepe culpa odit voluptas hic
-        necessitatibus animi consequuntur eligendi illum mollitia
-        exercitationem!
+        Our fresh baked goods are just a click away. We offer fast and reliable
+        delivery services to bring our kitchen's warmth directly to you.
       </p>
     </section>
 
-    <section class="comments">
-      <h2>Comments</h2>
-      <div class="comments-slider" id="slider"> 
-        <div class="comment-card">
-          <img src="https://i.pravatar.cc/100?img=1" alt="User" />
-          <h4>Omar</h4>
-          <p>Great food and wonderful service! Definitely coming back again.</p>
-        </div>
-        <div class="comment-card">
-          <img src="https://i.pravatar.cc/100?img=2" alt="User" />
-          <h4>Anna</h4>
-          <p>The salads are fresh and tasty. Loved the ambiance too!</p>
-        </div>
-        <div class="comment-card">
-          <img src="https://i.pravatar.cc/100?img=3" alt="User" />
-          <h4>James</h4>
-          <p>Best pizza in town! Crispy crust and rich flavor.</p>
-        </div>
-        <div class="comment-card">
-          <img src="https://i.pravatar.cc/100?img=4" alt="User" />
-          <h4>Sarah</h4>
-          <p>I enjoyed the grill menu, perfect for family dinner.</p>
-        </div>
-        <div class="comment-card">
-          <img src="https://i.pravatar.cc/100?img=5" alt="User" />
-          <h4>Pertricia</h4>
-          <p>Roti manisnya luar biasa! Pelayanan cepat dan sangat ramah.</p>
-        </div>
-        <div class="comment-card">
-          <img src="https://i.pravatar.cc/100?img=6" alt="User" />
-          <h4>Maya</h4>
-          <p>Suka sekali dengan croissant menteganya, renyah dan harum!</p>
-        </div>
-      </div>
-      <div class="slider-buttons">
-        <button id="prevCommentBtn">‹</button>
-        <button id="nextCommentBtn">›</button>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Hubungi Kami</h2>
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Hubungi Kami</h2>
         <div class="contact-grid">
-            
-            <div class="contact-info-map-area">
-                <h3>Informasi Kontak</h3>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i> Alamat: Jl. Raya Bakery No. 12, Jakarta.
-                </p>
-                <p>
-                    <i class="fas fa-envelope"></i> Email: vanisha2010@gmail.com
-                </p>
-                <p>
-                    <i class="fas fa-phone"></i> Telp: 0812-3456-7890
-                </p>
-                <a href="https://wa.me/6281234567890" target="_blank" class="btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Chat via WhatsApp
-                </a>
-                
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5050882772583!2d106.8174526147699!3d-6.195159395499252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f43f0f0f0f0f%3A0x1234567890abcdef!2sMonas%20(Monumen%20Nasional)!5e0!3m2!1sid!2sid!4v1678901234567!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
+          <div class="contact-info">
+            <h3>Informasi Vanisha</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jl. Kenangan Manis No. 123,
+              Jakarta
+            </p>
+            <p><i class="fas fa-phone"></i> (021) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> halo@vanishabakery.com</p>
+          </div>
 
-            <div class="contact-form-area">
-                <h3>Kirimkan Pesan</h3>
-                <form action="submit_form.php" method="POST">
-                    <input type="text" placeholder="Nama Anda" required>
-                    <input type="email" placeholder="Email Anda" required>
-                    <input type="text" placeholder="Subjek Pesan (Opsional)">
-                    <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
-                    <button type="submit" class="btn-submit">Kirim Pesan</button>
-                </form>
-            </div>
-            
+          <form class="contact-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit" class="cta-button">Kirim Pesan</button>
+          </form>
         </div>
+      </div>
     </section>
 
     <footer class="detailed-footer">
       <div class="footer-container">
-        <div class="footer-column gallery-column">
-          <h3>GALLERY</h3>
+        <div class="footer-column gallery-section">
+          <h3>Gallery</h3>
           <div class="gallery-grid">
-            <img src="img/gambar1.jpg" alt="Gallery Item 1" />
-            <img src="img/gambar2.jpg" alt="Gallery Item 2" />
-            <img src="img/gambar1.jpg" alt="Gallery Item 3" />
-            <img src="img/gambar3.jpg" alt="Gallery Item 4" />
-            <img src="img/gambar4.jpg" alt="Gallery Item 5" />
-            <img src="img/gambar3.jpg" alt="Gallery Item 6" />
+            <img src="img/gambar1.jpg" alt="Gallery 1" />
+            <img src="img/gambar2.jpg" alt="Gallery 2" />
+            <img src="img/gambar3.jpg" alt="Gallery 3" />
+            <img src="img/gambar4.jpg" alt="Gallery 4" />
+            <img src="img/gambar2.jpg" alt="Gallery 5" />
+            <img src="img/gambar4.jpg" alt="Gallery 6" />
           </div>
         </div>
-
         <div class="footer-column">
-          <h3>ABOUT US</h3>
+          <h3>About Us</h3>
           <ul>
             <li><a href="#about">About us</a></li>
             <li><a href="#">Customer Service</a></li>
@@ -311,24 +303,22 @@
             <li><a href="#">Sitemap</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
-          <h3>SUPPORT</h3>
+          <h3>Support</h3>
           <ul>
             <li><a href="#">Shipping & Returns</a></li>
             <li><a href="#">Secure Shopping</a></li>
-            <li><a href="#delivery">Delivery</a></li>
+            <li><a href="#">Delivery</a></li>
             <li><a href="#">Payment method</a></li>
             <li><a href="#">Online support</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
-          <h3>ACCOUNT INFO</h3>
+          <h3>Account Info</h3>
           <ul>
             <li><a href="#">Order History</a></li>
             <li><a href="#">My Account</a></li>
-            <li><a href="#menu">Best sellers</a></li>
+            <li><a href="#">Best sellers</a></li>
             <li><a href="#">New products</a></li>
             <li><a href="#">Our stores</a></li>
           </ul>
@@ -337,49 +327,58 @@
 
       <div class="sub-footer-bar">
         <div class="footer-content-wrap">
-          <div class="sign-up">
-            <h4>SIGN UP</h4>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Your email address" required />
-              <button type="submit">GO</button>
-            </form>
-          </div>
-
           <div class="follow-us">
             <h4>FOLLOW US</h4>
             <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/hen.dy_?igsh=MXJnNHUyZzVhZW83eg=="
-                ><i class="fab fa-instagram"></i
-              ></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="https://www.tiktok.com/@whynotzz_?_t=ZS-8zwWp7pFX40&_r=1"
                 ><i class="fab fa-tiktok"></i
               ></a>
+              <a
+                href="https://www.instagram.com/hen.dy_?igsh=MXJnNHUyZzVhZW83eg=="
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
               <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-
           <div class="payment-info">
             <h4>PAYMENT</h4>
-            <img src="img/visa.png" alt="Visa" class="payment-logo" />
             <img
-              src="img/paypal.png"
+              src="https://via.placeholder.com/50x30?text=VISA"
+              alt="Visa"
+              class="payment-logo"
+            />
+            <img
+              src="https://via.placeholder.com/50x30?text=PAYPAL"
               alt="PayPal"
               class="payment-logo"
             />
-            <img src="img/dana.jpg" alt="Dana" class="payment-logo" />
-            <img src="img/bca.jpg" alt="BCA" class="payment-logo" />
+            <img
+              src="https://via.placeholder.com/50x30?text=MASTERCARD"
+              alt="MasterCard"
+              class="payment-logo"
+            />
           </div>
         </div>
       </div>
 
       <div class="copyright-bar">
-        <p>Copyright 2025 | Vanisha Bakery.</p>
+        <p>Copyright © 2024 Vanisha Bakery. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <a id="backToTopBtn" href="#" class="back-to-top">▲</a>
+    <div class="cart-sidebar">
+      <h3>Shopping Cart</h3>
+      <div id="cart-items"></div>
+      <div class="cart-total">Total: <span id="cart-total">Rp0</span></div>
+      <button class="checkout-btn">Checkout</button>
+      <button class="close-cart-btn">Close</button>
+    </div>
+
+    <div class="toast-notification"></div>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="script.js"></script>
   </body>
