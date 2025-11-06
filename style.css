@@ -121,7 +121,7 @@ a {
 
 .cart-icon {
   font-size: 24px;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   position: relative;
   padding: 5px;
