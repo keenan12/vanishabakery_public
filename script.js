@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ======== Navbar & Burger Menu ========
+  // ======== Navbar & Roti Menu ========
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
 

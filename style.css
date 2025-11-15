@@ -121,7 +121,7 @@ a {
 
 .cart-icon {
   font-size: 24px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   position: relative;
   padding: 5px;
@@ -258,13 +258,30 @@ section h2 {
   color: #333;
 }
 
-/* ================= Menu ================= */
+/* ================= Menu (PERBAIKAN: Dua Baris + Horizontal Scroll yang Konsisten) ================= */
+
+/* Wrapper Kunci untuk Horizontal Scroll */
+.menu-wrapper {
+  max-width: 1100px; /* Lebar maksimal konten */
+  margin: auto;
+  overflow-x: auto; /* KRITIS: Mengaktifkan scroll horizontal pada wrapper */
+  padding-bottom: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.menu-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* Default: 5 kolom per baris */
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
   gap: 20px;
-  max-width: 1100px;
-  margin: auto;
+  /* KRITIS: Memaksa lebar minimum untuk 5 kolom. Jika lebih banyak item, scroll horizontal akan aktif. */
+  min-width: calc(5 * 220px + 4 * 20px);
+  padding: 10px 20px 0 0;
 }
 
 .menu-card {
@@ -446,10 +463,10 @@ section h2 {
   visibility: visible;
 }
 
-/* ================= COMMENTS SLIDER (DESAIN BARU & AMAN AVATAR) ================= */
+/* ================= COMMENTS SLIDER (PERBAIKAN: Foto Full) ================= */
 #comments {
-  background-color: #f7f7f7; 
-  padding: 80px 7%; 
+  background-color: #f7f7f7;
+  padding: 80px 7%;
   text-align: center;
 }
 
@@ -469,14 +486,14 @@ section h2 {
 
 .comments-header h2 {
   font-size: 2.5rem;
-  color: #333333; 
+  color: #333333;
   margin-bottom: 5px;
-  font-weight: 800; 
+  font-weight: 800;
   position: relative;
   display: inline-block;
 }
 
-.separator-line { 
+.separator-line {
   display: inline-block;
   width: 60px;
   height: 3px;
@@ -501,12 +518,13 @@ section h2 {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 40px; 
+  gap: 40px;
   padding: 20px 0;
   max-width: 1100px;
   margin: 20px auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  flex-wrap: nowrap; /* Memastikan card tidak wrap ke bawah */
 }
 
 .comments-slider::-webkit-scrollbar {
@@ -514,19 +532,19 @@ section h2 {
 }
 
 .comment-card {
-  min-width: 320px; 
-  max-width: 350px; 
+  min-width: 320px;
+  max-width: 350px;
   flex: 0 0 auto;
   background: white;
   padding: 30px;
   padding-top: 100px;
   border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-  border: 1px solid transparent; 
-  cursor: pointer; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .comment-card:hover {
@@ -545,28 +563,31 @@ section h2 {
   background-color: #f0f8ff;
 }
 
-
-/* --- Avatar Styling (Tidak Terpotong) --- */
+/* --- Avatar Styling (Tidak Terpotong/Full) --- */
 .avatar-container {
   position: absolute;
-  top: -50px; 
+  top: -22px;
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* KRITIS */
-  border: 5px solid #6c9c64; 
-  background-color: white; 
-  overflow: hidden; /* KRITIS */
+  border-radius: 50%;
+  border: 5px solid #6c9c64;
+  background-color: white;
+  overflow: hidden;
   z-index: 10;
+  /* KRITIS untuk centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* KRITIS: Memastikan gambar mengisi penuh tanpa distorsi */
   border-radius: 50%;
-  border: 3px solid white; 
+  border: 3px solid white;
 }
 
 /* --- Konten Kartu --- */
@@ -583,20 +604,20 @@ section h2 {
   color: #666666;
   line-height: 1.6;
   margin-bottom: 20px;
-  min-height: 100px; 
+  min-height: 100px;
   display: -webkit-box;
-  -webkit-line-clamp: 4; 
-  -webkit-box-orient: vertical; 
-  overflow: hidden; 
+  /* -webkit-line-clamp: 4; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   text-align: center;
 }
 
 .comment-card .rating {
   color: gold;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   margin: 0;
   padding: 0;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .slider-buttons {
@@ -607,7 +628,7 @@ section h2 {
 }
 
 .slider-buttons button {
-  background-color: #4a689b; 
+  background-color: #4a689b;
   color: white;
   border: none;
   width: 40px;
@@ -622,7 +643,6 @@ section h2 {
 .slider-buttons button:hover {
   background-color: #3b5785;
 }
-
 
 /* ================= DELIVERY/PENGIRIMAN ================= */
 #delivery {
@@ -753,7 +773,7 @@ section h2 {
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 30px; 
+  margin-top: 30px;
   width: 140px;
   align-self: flex-start; /* KRITIS: Agar tombol rata kiri */
   transition: background-color 0.3s;
@@ -901,6 +921,12 @@ section h2 {
 
 /* Tablet & Layar Kecil (di bawah 992px) */
 @media (max-width: 992px) {
+  /* Menu Grid */
+  .menu-grid {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    min-width: calc(4 * 200px + 3 * 20px); /* Memaksa 4 kolom * 2 baris */
+  }
+
   /* Perbaikan Kontak */
   .contact-grid {
     flex-direction: column; /* KRITIS: Menumpuk kolom Informasi dan Form */
@@ -912,14 +938,14 @@ section h2 {
     justify-content: center;
   }
   .contact-form {
-    align-items: center; 
+    align-items: center;
     width: 100%;
     max-width: 400px;
   }
   .contact-form .cta-button {
-     align-self: center; /* Tombol rata tengah saat tumpukan */
+    align-self: center; /* Tombol rata tengah saat tumpukan */
   }
-  
+
   /* Footer */
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -975,6 +1001,12 @@ section h2 {
     max-width: 300px;
   }
 
+  /* Menu Grid */
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    min-width: calc(3 * 180px + 2 * 20px); /* Memaksa 3 kolom * 2 baris */
+  }
+
   /* Penyesuaian Responsive Komentar */
   #comments {
     padding: 60px 5%;
@@ -986,13 +1018,18 @@ section h2 {
     gap: 20px;
   }
   .comment-card {
+    position: relative;
     min-width: 280px;
-    padding-top: 80px; 
+    padding-top: 90px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+    text-align: center;
   }
   .avatar-container {
     width: 80px;
     height: 80px;
-    top: -40px; 
+    top: -40px;
     border: 4px solid #6c9c64;
   }
   .card-name {
@@ -1000,7 +1037,7 @@ section h2 {
   }
   .card-text {
     font-size: 0.9rem;
-    min-height: 80px; 
+    min-height: 80px;
   }
   .comment-card .rating {
     font-size: 1.1rem;
@@ -1036,13 +1073,19 @@ section h2 {
     margin-bottom: 0;
   }
 
+  /* Menu Grid */
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    min-width: calc(2 * 160px + 1 * 20px); /* Memaksa 2 kolom * 2 baris */
+  }
+
   /* Penyesuaian Responsive Komentar Lebih Lanjut */
   .comments-slider {
     margin: 10px auto;
     gap: 10px;
   }
   .comment-card {
-    min-width: 90%; 
+    min-width: 90%;
     padding: 20px;
     padding-top: 70px;
   }
